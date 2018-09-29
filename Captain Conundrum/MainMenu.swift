@@ -32,11 +32,11 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
     let achievementTitle = GKAchievement(identifier: "achievement.easteregg")
     
     override func didMove(to view: SKView) {
-        player = childNode(withName: "player") as! MSButtonNode
-        blast = childNode(withName: "blast") as! SKSpriteNode
-        title = childNode(withName: "title") as! SKSpriteNode
-        buttonStart = childNode(withName: "buttonStart") as! MSButtonNode
-        buttonOptions = childNode(withName: "buttonOptions") as! MSButtonNode
+        player = childNode(withName: "player") as? MSButtonNode
+        blast = childNode(withName: "blast") as? SKSpriteNode
+        title = childNode(withName: "title") as? SKSpriteNode
+        buttonStart = childNode(withName: "buttonStart") as? MSButtonNode
+        buttonOptions = childNode(withName: "buttonOptions") as? MSButtonNode
         scrollLayer = childNode(withName: "scrollLayer")
         
         for (key: sound, value: (file: file, track: _)) in soundEffects {
@@ -97,7 +97,7 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadGame() {
-        guard let skView = self.view as SKView! else {
+        guard let skView = self.view as SKView? else {
             print("Cound not get SKview")
             return
         }
@@ -114,7 +114,7 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadOptions() {
-        guard let skView = self.view as SKView! else {
+        guard let skView = self.view as SKView? else {
             print("Cound not get SKview")
             return
         }
@@ -162,15 +162,15 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
                 self.soundEffects["explosion"]?.track?.play()
             }
             if nodeA.name == "blast" {
-                blast = nodeA as! SKSpriteNode
+                blast = nodeA as? SKSpriteNode
                 blast.position.y = 0
-                title = nodeB as! SKSpriteNode
+                title = nodeB as? SKSpriteNode
                 title.physicsBody?.angularVelocity = 50
                 title.physicsBody?.velocity = CGVector(dx: 0, dy: -400)
             } else {
-                blast = nodeB as! SKSpriteNode
+                blast = nodeB as? SKSpriteNode
                 blast.position.y = 0
-                title = nodeA as! SKSpriteNode
+                title = nodeA as? SKSpriteNode
                 title.physicsBody?.angularVelocity = 50
                 title.physicsBody?.velocity = CGVector(dx: 0, dy: -400)
             }

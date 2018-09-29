@@ -84,7 +84,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     
     // MARK: - AUTHENTICATE LOCAL PLAYER
     func authenticateLocalPlayer() {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.local
         
         localPlayer.authenticateHandler = {(ViewController, error) -> Void in
             if((ViewController) != nil) {

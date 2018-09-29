@@ -70,44 +70,44 @@ class Options: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelegate
     var exitCustomize: MSButtonNode!
     
     override func didMove(to view: SKView) {
-        buttonControls = childNode(withName: "buttonControls") as! MSButtonNode
-        buttonCredits = childNode(withName: "buttonCredits") as! MSButtonNode
-        buttonCustomize = childNode(withName: "buttonCustomize") as! MSButtonNode
-        leaderboards = childNode(withName: "leaderboards") as! MSButtonNode
-        achievements = childNode(withName: "achievements") as! MSButtonNode
-        buttonBack = childNode(withName: "buttonBack") as! MSButtonNode
-        musicOn = childNode(withName: "musicOn") as! MSButtonNode
-        musicOff = childNode(withName: "musicOff") as! MSButtonNode
+        buttonControls = childNode(withName: "buttonControls") as? MSButtonNode
+        buttonCredits = childNode(withName: "buttonCredits") as? MSButtonNode
+        buttonCustomize = childNode(withName: "buttonCustomize") as? MSButtonNode
+        leaderboards = childNode(withName: "leaderboards") as? MSButtonNode
+        achievements = childNode(withName: "achievements") as? MSButtonNode
+        buttonBack = childNode(withName: "buttonBack") as? MSButtonNode
+        musicOn = childNode(withName: "musicOn") as? MSButtonNode
+        musicOff = childNode(withName: "musicOff") as? MSButtonNode
         
-        screenControls = childNode(withName: "screenControls") as! SKSpriteNode
-        buttonLow = screenControls.childNode(withName: "buttonLow") as! MSButtonNode
-        buttonMedium = screenControls.childNode(withName: "buttonMedium") as! MSButtonNode
-        buttonHigh = screenControls.childNode(withName: "buttonHigh") as! MSButtonNode
-        buttonJoystick = screenControls.childNode(withName: "buttonJoystick") as! MSButtonNode
-        buttonMotion = screenControls.childNode(withName: "buttonMotion") as! MSButtonNode
-        player = screenControls.childNode(withName: "player") as! SKSpriteNode
+        screenControls = childNode(withName: "screenControls") as? SKSpriteNode
+        buttonLow = screenControls.childNode(withName: "buttonLow") as? MSButtonNode
+        buttonMedium = screenControls.childNode(withName: "buttonMedium") as? MSButtonNode
+        buttonHigh = screenControls.childNode(withName: "buttonHigh") as? MSButtonNode
+        buttonJoystick = screenControls.childNode(withName: "buttonJoystick") as? MSButtonNode
+        buttonMotion = screenControls.childNode(withName: "buttonMotion") as? MSButtonNode
+        player = screenControls.childNode(withName: "player") as? SKSpriteNode
         joystick = JoystickNode(radius: 25, backgroundColor: UIColor(red: 75 / 255, green: 75 / 255, blue: 75 / 255, alpha: 0.6), mainColor: UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.9))
         joystick.position = CGPoint(x: -75, y: -225)
         screenControls.addChild(joystick)
-        controlBoundary = screenControls.childNode(withName: "controlBoundary") as! SKSpriteNode
-        currentControl = screenControls.childNode(withName: "currentControl") as! SKSpriteNode
-        currentScheme = screenControls.childNode(withName: "currentScheme") as! SKSpriteNode
-        exitControls = screenControls.childNode(withName: "exitControls") as! MSButtonNode
+        controlBoundary = screenControls.childNode(withName: "controlBoundary") as? SKSpriteNode
+        currentControl = screenControls.childNode(withName: "currentControl") as? SKSpriteNode
+        currentScheme = screenControls.childNode(withName: "currentScheme") as? SKSpriteNode
+        exitControls = screenControls.childNode(withName: "exitControls") as? MSButtonNode
         
-        screenCredits = childNode(withName: "screenCredits") as! SKSpriteNode
-        exitCredits = screenCredits.childNode(withName: "exitCredits") as! MSButtonNode
+        screenCredits = childNode(withName: "screenCredits") as? SKSpriteNode
+        exitCredits = screenCredits.childNode(withName: "exitCredits") as? MSButtonNode
         
-        screenCustomize = childNode(withName: "screenCustomize") as! SKSpriteNode
-        design1 = screenCustomize.childNode(withName: "design1") as! MSButtonNode
-        design2 = screenCustomize.childNode(withName: "design2") as! MSButtonNode
-        design3 = screenCustomize.childNode(withName: "design3") as! MSButtonNode
-        colorBlue = screenCustomize.childNode(withName: "colorBlue") as! MSButtonNode
-        colorGreen = screenCustomize.childNode(withName: "colorGreen") as! MSButtonNode
-        colorOrange = screenCustomize.childNode(withName: "colorOrange") as! MSButtonNode
-        colorRed = screenCustomize.childNode(withName: "colorRed") as! MSButtonNode
-        outlineShip = screenCustomize.childNode(withName: "outlineShip") as! SKSpriteNode
-        outlineColor = screenCustomize.childNode(withName: "outlineColor") as! SKSpriteNode
-        exitCustomize = screenCustomize.childNode(withName: "exitCustomize") as! MSButtonNode
+        screenCustomize = childNode(withName: "screenCustomize") as? SKSpriteNode
+        design1 = screenCustomize.childNode(withName: "design1") as? MSButtonNode
+        design2 = screenCustomize.childNode(withName: "design2") as? MSButtonNode
+        design3 = screenCustomize.childNode(withName: "design3") as? MSButtonNode
+        colorBlue = screenCustomize.childNode(withName: "colorBlue") as? MSButtonNode
+        colorGreen = screenCustomize.childNode(withName: "colorGreen") as? MSButtonNode
+        colorOrange = screenCustomize.childNode(withName: "colorOrange") as? MSButtonNode
+        colorRed = screenCustomize.childNode(withName: "colorRed") as? MSButtonNode
+        outlineShip = screenCustomize.childNode(withName: "outlineShip") as? SKSpriteNode
+        outlineColor = screenCustomize.childNode(withName: "outlineColor") as? SKSpriteNode
+        exitCustomize = screenCustomize.childNode(withName: "exitCustomize") as? MSButtonNode
         
         // Position of currentControl
         switch UserDefaults().double(forKey: "motionConstant") {
@@ -410,7 +410,7 @@ class Options: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelegate
     }
     
     func loadMainMenu() {
-        guard let skView = self.view as SKView! else {
+        guard let skView = self.view as SKView? else {
             print("Cound not get SKview")
             return
         }

@@ -241,30 +241,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         // Called immediately after scene is loaded into view
-        player = childNode(withName: "player") as! SKSpriteNode
-        initialMeteor = childNode(withName: "initialMeteor") as! SKSpriteNode
-        meteor = childNode(withName: "meteor") as! SKSpriteNode
-        satellite = childNode(withName: "satellite") as! SKSpriteNode
-        rocket = childNode(withName: "rocket") as! SKSpriteNode
-        ufo = childNode(withName: "ufo") as! SKSpriteNode
+        player = childNode(withName: "player") as? SKSpriteNode
+        initialMeteor = childNode(withName: "initialMeteor") as? SKSpriteNode
+        meteor = childNode(withName: "meteor") as? SKSpriteNode
+        satellite = childNode(withName: "satellite") as? SKSpriteNode
+        rocket = childNode(withName: "rocket") as? SKSpriteNode
+        ufo = childNode(withName: "ufo") as? SKSpriteNode
         
-        powerupHealth = childNode(withName: "powerupHealth") as! SKSpriteNode
-        powerupRapidFire = childNode(withName: "powerupRapidFire") as! SKSpriteNode
-        powerupSpread = childNode(withName: "powerupSpread") as! SKSpriteNode
-        powerupInvincible = childNode(withName: "powerupInvincible") as! SKSpriteNode
+        powerupHealth = childNode(withName: "powerupHealth") as? SKSpriteNode
+        powerupRapidFire = childNode(withName: "powerupRapidFire") as? SKSpriteNode
+        powerupSpread = childNode(withName: "powerupSpread") as? SKSpriteNode
+        powerupInvincible = childNode(withName: "powerupInvincible") as? SKSpriteNode
         
-        buttonPause = childNode(withName: "buttonPause") as! MSButtonNode
+        buttonPause = childNode(withName: "buttonPause") as? MSButtonNode
         boxPause = childNode(withName: "boxPause")
-        buttonContinue = boxPause.childNode(withName: "buttonContinue") as! MSButtonNode
-        buttonQuit = boxPause.childNode(withName: "buttonQuit") as! MSButtonNode
+        buttonContinue = boxPause.childNode(withName: "buttonContinue") as? MSButtonNode
+        buttonQuit = boxPause.childNode(withName: "buttonQuit") as? MSButtonNode
         boxGameOver = childNode(withName: "boxGameOver")
-        buttonRetry = boxGameOver.childNode(withName: "buttonRetry") as! MSButtonNode
-        buttonQuit2 = boxGameOver.childNode(withName: "buttonQuit2") as! MSButtonNode
+        buttonRetry = boxGameOver.childNode(withName: "buttonRetry") as? MSButtonNode
+        buttonQuit2 = boxGameOver.childNode(withName: "buttonQuit2") as? MSButtonNode
         
         scrollLayer = childNode(withName: "scrollLayer")
-        scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
-        timeLabel = childNode(withName: "timeLabel") as! SKLabelNode
-        healthBar = childNode(withName: "healthBar") as! SKSpriteNode
+        scoreLabel = childNode(withName: "scoreLabel") as? SKLabelNode
+        timeLabel = childNode(withName: "timeLabel") as? SKLabelNode
+        healthBar = childNode(withName: "healthBar") as? SKSpriteNode
         
         joystick = JoystickNode(radius: 25, backgroundColor: UIColor(red: 75 / 255, green: 75 / 255, blue: 75 / 255, alpha: 0.6), mainColor: UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.9))
         joystick.position = CGPoint(x: -75, y: -225)
@@ -315,7 +315,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.soundEffects["exit"]?.track?.play()
             }
             
-            guard let skView = self.view as SKView! else {
+            guard let skView = self.view as SKView? else {
                 print("Cound not get SKview")
                 return
             }
@@ -340,7 +340,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.boxGameOver.position.x = -320
             
-            guard let skView = self.view as SKView! else {
+            guard let skView = self.view as SKView? else {
                 print("Could not get SKview")
                 return
             }
