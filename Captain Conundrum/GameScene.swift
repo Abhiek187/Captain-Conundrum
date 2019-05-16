@@ -534,7 +534,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Controls the behavior of each UFO
         for ufo in ufoArray {
             // Action: 0 = +dx, 1 = -dx
-            guard let index = ufoArray.index(of: ufo) else { return }
+            guard let index = ufoArray.firstIndex(of: ufo) else { return }
             ufoData[index].timer += fixedDelta
             
             // Every 2 seconds, the UFO fires
@@ -954,13 +954,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if nodeA.name == "rocket" {
                 contactA.categoryBitMask = 0
-                guard let rocketIndex = rocketArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
                 nodeA.run(SKAction.sequence([SKAction(named: "Explode")!, SKAction.removeFromParent()]))
                 nodeB.removeFromParent()
             } else {
                 contactB.categoryBitMask = 0
-                guard let rocketIndex = rocketArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
                 nodeB.run(SKAction.sequence([SKAction(named: "Explode")!, SKAction.removeFromParent()]))
                 nodeA.removeFromParent()
@@ -983,14 +983,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if nodeA.name == "ufo" {
                 contactA.categoryBitMask = 0
-                guard let ufoIndex = ufoArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
                 nodeA.run(SKAction.sequence([SKAction(named: "Explode")!, SKAction.removeFromParent()]))
                 nodeB.removeFromParent()
             } else {
                 contactB.categoryBitMask = 0
-                guard let ufoIndex = ufoArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
                 nodeB.run(SKAction.sequence([SKAction(named: "Explode")!, SKAction.removeFromParent()]))
@@ -1028,17 +1028,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if (nodeA.name == "meteor" || nodeA.name == "satellite" || nodeA.name == "rocket" || nodeA.name == "ufo" || nodeA.name == "powerupHealth" || nodeA.name == "powerupRapidFire" || nodeA.name == "powerupSpread" || nodeA.name == "powerupInvincible") && nodeB.name == "boundary" ||
             nodeA.name == "boundary" && (nodeB.name == "meteor" || nodeB.name == "satellite" || nodeB.name == "rocket" || nodeB.name == "ufo" || nodeB.name == "powerupHealth" || nodeB.name == "powerupRapidFire" || nodeB.name == "powerupSpread" || nodeB.name == "powerupInvincible") {
             if nodeA.name == "rocket" {
-                guard let rocketIndex = rocketArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
             } else if nodeB.name == "rocket" {
-                guard let rocketIndex = rocketArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
             } else if nodeA.name == "ufo" {
-                guard let ufoIndex = ufoArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
             } else if nodeB.name == "ufo" {
-                guard let ufoIndex = ufoArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
             }
@@ -1096,17 +1096,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             if nodeA.name == "rocket" {
-                guard let rocketIndex = rocketArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
             } else if nodeB.name == "rocket" {
-                guard let rocketIndex = rocketArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let rocketIndex = rocketArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 rocketArray.remove(at: rocketIndex)
             } else if nodeA.name == "ufo" {
-                guard let ufoIndex = ufoArray.index(of: nodeA as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeA as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
             } else if nodeB.name == "ufo" {
-                guard let ufoIndex = ufoArray.index(of: nodeB as! SKSpriteNode) else { return }
+                guard let ufoIndex = ufoArray.firstIndex(of: nodeB as! SKSpriteNode) else { return }
                 ufoData.remove(at: ufoIndex)
                 ufoArray.remove(at: ufoIndex)
             }
