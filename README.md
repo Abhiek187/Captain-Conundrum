@@ -1,5 +1,7 @@
 # Captain Conundrum
 
+<img src="screenshot.jpg" alt="Captain Conundrum" width="300">
+
 ## About
 
 This is my first publicly released iOS game, created at Make School Summer Academy 2017. It's a top-down space shooter with two objectives. One is to destroy as many obstacles as you can to get a high score. The other is to avoid as many obstacles as you can to get a low score. As time progresses, enemies get faster and power-ups will come along the way. Use these to your advantage in order to destroy or avoid obstacles. Tilt the phone to control the spaceship and tap to shoot a laser beam. The game ends if your ship takes too much damage.
