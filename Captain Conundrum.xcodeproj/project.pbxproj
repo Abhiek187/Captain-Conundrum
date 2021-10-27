@@ -42,9 +42,9 @@
 /* Begin PBXFileReference section */
 		250A34AC1F32202F001E110C /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		250EF15A1F34C8D20042D674 /* jinglesounds-kenney */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "jinglesounds-kenney"; sourceTree = "<group>"; };
-		250EF15C1F34CE600042D674 /* click1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = click1.caf; path = ../click1.caf; sourceTree = "<group>"; };
-		250EF15F1F34E1A90042D674 /* highDown.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = highDown.caf; path = ../highDown.caf; sourceTree = "<group>"; };
-		250EF1601F34E1A90042D674 /* switch34.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = switch34.caf; path = ../switch34.caf; sourceTree = "<group>"; };
+		250EF15C1F34CE600042D674 /* click1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = click1.caf; sourceTree = "<group>"; };
+		250EF15F1F34E1A90042D674 /* highDown.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = highDown.caf; sourceTree = "<group>"; };
+		250EF1601F34E1A90042D674 /* switch34.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = switch34.caf; sourceTree = "<group>"; };
 		250EF1691F34E7CF0042D674 /* techological.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = techological.caf; sourceTree = "<group>"; };
 		250EF16B1F34EBB90042D674 /* laser7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = laser7.caf; sourceTree = "<group>"; };
 		251363E41F3A2AED00963B60 /* powerUp12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = powerUp12.caf; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				250EF1691F34E7CF0042D674 /* techological.caf */,
 				251363E41F3A2AED00963B60 /* powerUp12.caf */,
 			);
-			name = SFX;
+			path = SFX;
 			sourceTree = "<group>";
 		};
 		254CF40C1F26262F008711BC = {
@@ -142,8 +142,8 @@
 				F18AC77927290E77006CC19D /* Controllers */,
 				F18AC77D27290EA1006CC19D /* Helpers */,
 				F18AC77C27290E9B006CC19D /* Scenes */,
-				F18AC77B27290E8F006CC19D /* SKS */,
 				25192DDA1F262D0800722D8F /* SFX */,
+				F18AC77B27290E8F006CC19D /* SKS */,
 				254CF4221F26262F008711BC /* Main.storyboard */,
 				254CF4251F26262F008711BC /* Assets.xcassets */,
 				254CF4271F26262F008711BC /* LaunchScreen.storyboard */,
@@ -157,7 +157,7 @@
 			children = (
 				254CF4201F26262F008711BC /* GameViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F18AC77B27290E8F006CC19D /* SKS */ = {
@@ -169,7 +169,7 @@
 				254CF41C1F26262F008711BC /* Actions.sks */,
 				250A34AC1F32202F001E110C /* Fire.sks */,
 			);
-			name = SKS;
+			path = SKS;
 			sourceTree = "<group>";
 		};
 		F18AC77C27290E9B006CC19D /* Scenes */ = {
@@ -179,7 +179,7 @@
 				25EFF5621F26720F0096F4FA /* Options.swift */,
 				254CF41E1F26262F008711BC /* GameScene.swift */,
 			);
-			name = Scenes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		F18AC77D27290EA1006CC19D /* Helpers */ = {
@@ -189,7 +189,7 @@
 				25FF198F1F29239C006F80BA /* CGFloat+Extensions.swift */,
 				2571EFB41F4B386C00929BDD /* JoystickNode.swift */,
 			);
-			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
