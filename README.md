@@ -1,6 +1,6 @@
 # Captain Conundrum
 
-<img src="screenshot.jpg" alt="Captain Conundrum" width="300">
+<img src="screenshots/screenshot.jpg" alt="Captain Conundrum" width="300">
 
 ## About
 

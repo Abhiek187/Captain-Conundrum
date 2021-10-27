@@ -15,11 +15,8 @@
 		250EF16A1F34E7CF0042D674 /* techological.caf in Resources */ = {isa = PBXBuildFile; fileRef = 250EF1691F34E7CF0042D674 /* techological.caf */; };
 		250EF16C1F34EBB90042D674 /* laser7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 250EF16B1F34EBB90042D674 /* laser7.caf */; };
 		251363E51F3A2AED00963B60 /* powerUp12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 251363E41F3A2AED00963B60 /* powerUp12.caf */; };
-		251363E91F3A5A4900963B60 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251363E71F3A5A4900963B60 /* Fabric.framework */; };
-		251363EA1F3A5A4900963B60 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251363E81F3A5A4900963B60 /* Answers.framework */; };
 		2513E3421F39454C009EE04B /* laser5_trimmed.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2513E3411F39454C009EE04B /* laser5_trimmed.caf */; };
 		2513E3441F39455C009EE04B /* cc0_explosion_large_gun_powder_trimmed.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2513E3431F39455C009EE04B /* cc0_explosion_large_gun_powder_trimmed.caf */; };
-		251821F91F45E2FB0031AE9C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251821F81F45E2FB0031AE9C /* GameKit.framework */; };
 		25192DE81F262E4800722D8F /* digital-sfx-set in Resources */ = {isa = PBXBuildFile; fileRef = 25192DE71F262E4800722D8F /* digital-sfx-set */; };
 		25192DEA1F262E6B00722D8F /* ui-sfx-set in Resources */ = {isa = PBXBuildFile; fileRef = 25192DE91F262E6B00722D8F /* ui-sfx-set */; };
 		254CF4191F26262F008711BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254CF4181F26262F008711BC /* AppDelegate.swift */; };
@@ -37,6 +34,9 @@
 		25EFF5611F26685C0096F4FA /* Options.sks in Resources */ = {isa = PBXBuildFile; fileRef = 25EFF5601F26685C0096F4FA /* Options.sks */; };
 		25EFF5631F26720F0096F4FA /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFF5621F26720F0096F4FA /* Options.swift */; };
 		25FF19901F29239C006F80BA /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF198F1F29239C006F80BA /* CGFloat+Extensions.swift */; };
+		F18AC77227290B95006CC19D /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251363E81F3A5A4900963B60 /* Answers.framework */; };
+		F18AC77527290B96006CC19D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251363E71F3A5A4900963B60 /* Fabric.framework */; };
+		F18AC77727290B98006CC19D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251821F81F45E2FB0031AE9C /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,9 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251821F91F45E2FB0031AE9C /* GameKit.framework in Frameworks */,
-				251363EA1F3A5A4900963B60 /* Answers.framework in Frameworks */,
-				251363E91F3A5A4900963B60 /* Fabric.framework in Frameworks */,
+				F18AC77727290B98006CC19D /* GameKit.framework in Frameworks */,
+				F18AC77227290B95006CC19D /* Answers.framework in Frameworks */,
+				F18AC77527290B96006CC19D /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +436,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Captain\\ Conundrum",
 					"$(PROJECT_DIR)/Captain\\ Conundrum",
+					"$(PROJECT_DIR)/Captain\\ Conundrum",
+					"$(PROJECT_DIR)/Captain\\ Conundrum",
 				);
 				INFOPLIST_FILE = "Captain Conundrum/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -444,6 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.Captain-Conundrum";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -456,6 +459,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Captain\\ Conundrum",
 					"$(PROJECT_DIR)/Captain\\ Conundrum",
+					"$(PROJECT_DIR)/Captain\\ Conundrum",
+					"$(PROJECT_DIR)/Captain\\ Conundrum",
 				);
 				INFOPLIST_FILE = "Captain Conundrum/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -464,6 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.Captain-Conundrum";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
