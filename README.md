@@ -1,14 +1,12 @@
 # Captain Conundrum
 
-<table>
-  <tr>
-    <td><img src="screenshots/app-screenshot-1.jpg" alt="A journey through space." width="300"></td>
-    <td><img src="screenshots/app-screenshot-2.jpg" alt="Attack enemies in your way" width="300"></td>
-    <td><img src="screenshots/app-screenshot-3.jpg" alt="Collect power ups" width="300"></td>
-    <td><img src="screenshots/app-screenshot-4.jpg" alt="Go for a high score!" width="300"></td>
-    <td><img src="screenshots/app-screenshot-5.jpg" alt="Or perhaps a low score..." width="300"></td>
-  </tr>
-</table>
+<p>
+  <img src="screenshots/app-screenshot-1.jpg" alt="A journey through space." width="200">
+  <img src="screenshots/app-screenshot-2.jpg" alt="Attack enemies in your way" width="200">
+  <img src="screenshots/app-screenshot-3.jpg" alt="Collect power ups" width="200">
+  <img src="screenshots/app-screenshot-4.jpg" alt="Go for a high score!" width="200">
+  <img src="screenshots/app-screenshot-5.jpg" alt="Or perhaps a low score..." width="200">
+</p>
 
 https://user-images.githubusercontent.com/29958092/139177702-629a7517-b25a-44f6-b491-74a5505bc681.mp4
 
