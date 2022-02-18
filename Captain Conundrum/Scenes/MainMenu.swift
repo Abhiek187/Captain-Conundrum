@@ -98,7 +98,7 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
     
     func loadGame() {
         guard let skView = self.view as SKView? else {
-            print("Cound not get SKview")
+            print("Could not get SKView")
             return
         }
         
@@ -115,7 +115,7 @@ class MainMenu: SKScene, SKPhysicsContactDelegate {
     
     func loadOptions() {
         guard let skView = self.view as SKView? else {
-            print("Cound not get SKview")
+            print("Could not get SKView")
             return
         }
         

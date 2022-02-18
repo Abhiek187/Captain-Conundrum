@@ -316,7 +316,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             guard let skView = self.view as SKView? else {
-                print("Cound not get SKview")
+                print("Could not get SKView")
                 return
             }
             
@@ -341,7 +341,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.boxGameOver.position.x = -320
             
             guard let skView = self.view as SKView? else {
-                print("Could not get SKview")
+                print("Could not get SKView")
                 return
             }
             

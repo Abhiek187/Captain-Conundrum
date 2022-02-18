@@ -95,9 +95,9 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
                 self.gcEnabled = true
                 
                 // Get the default leaderboard ID
-                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
+                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifier, error) in
                     if error != nil { print(error!)
-                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
+                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifier! }
                 })
                 
             } else {

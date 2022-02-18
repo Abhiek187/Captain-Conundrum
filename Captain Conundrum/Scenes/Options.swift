@@ -411,7 +411,7 @@ class Options: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelegate
     
     func loadMainMenu() {
         guard let skView = self.view as SKView? else {
-            print("Cound not get SKview")
+            print("Could not get SKView")
             return
         }
         
