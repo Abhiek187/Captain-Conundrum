@@ -10,8 +10,6 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import AVFoundation // For AVAudioPlayer()
-//import Crashlytics // If using Answers with Crashlytics
-import Answers // If using Answers without Crashlytics
 import GameKit // For Game Center
 
 
@@ -28,16 +26,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*let button = UIButton(type: UIButtonType.roundedRect)
-        button.setTitle("Trigger Key Metric", for: [])
-        button.addTarget(self, action: #selector(self.anImportantUserAction), for: UIControlEvents.touchUpInside)
-        button.sizeToFit()
-        button.center = self.view.center
-        view.addSubview(button)
-        
-        // TODO: Track the user action that is important for you.
-        Answers.logContentView(withName: "Tweet", contentType: "Video", contentId: "1234", customAttributes: ["Favorites Count":20, "Screen Orientation":"Landscape"])*/
         
         // Call the GC authentication controller
         authenticateLocalPlayer()
@@ -72,14 +60,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
                 print("Music can't be played.")
             }
         }
-    }
-    
-    func anImportantUserAction() {
-        
-        // TODO: Move this method and customize the name and parameters to track your key metrics
-        //       Use your own string attributes to track common values over time
-        //       Use your own number attributes to track median value over time
-        Answers.logCustomEvent(withName: "Video Played", customAttributes: ["Category":"Comedy", "Length":350])
     }
     
     // MARK: - AUTHENTICATE LOCAL PLAYER
