@@ -442,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Captain Conundrum/Captain Conundrum.entitlements";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UF6E5BVT98;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -466,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Captain Conundrum/Captain Conundrum.entitlements";
 				DEVELOPMENT_TEAM = UF6E5BVT98;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
